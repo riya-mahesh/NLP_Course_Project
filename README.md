@@ -4,11 +4,12 @@ Cranfield dataset: https://ir-datasets.com/cranfield.html
 
 Create a directory 'output' inside the main directory.
 
-To obtain results, run main.py as before with the appropriate arguments.
-Usage: main.py [-custom] [-dataset DATASET FOLDER] [-out_folder OUTPUT FOLDER]
-               [-segmenter SEGMENTER TYPE (naive|punkt)] [-tokenizer TOKENIZER TYPE (naive|ptb)] [-reducer Sentence Segmenter Type ([stemming|lemmatization])]
-               [-lsa store_true][-doc2vec store_true][-word2vec store_true][-bm25 store_true]
-               
+To obtain results, run main.py with the appropriate arguments.
+```bash
+python3 main.py [-custom] [-dataset <DATASET FOLDER>] [-out_folder <OUTPUT FOLDER>]
+                [-segmenter (naive|punkt)] [-tokenizer (naive|ptb)]
+                [-reducer (stemming|lemmatization)] [-lsa] [-doc2vec] [-word2vec] [-bm25]
+```              
 For example: python3 main.py -word2vec -reducer lemmatization
 > Will run word2vec using lemmatization for inflection reduction
 
